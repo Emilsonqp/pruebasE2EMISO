@@ -18,6 +18,15 @@ module.exports = class MockarooClient {
     });
   }
 
+  async getDataPoolPosts2() {
+    return this.client.generate({
+      count: this.amount,
+      schema: 'post_schema'
+    }).then(function(records) {
+      return records;
+    });
+  }
+
   async getDataPoolPages() {
     return this.client.generate({
       count: this.amount,
