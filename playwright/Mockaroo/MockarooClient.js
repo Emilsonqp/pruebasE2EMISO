@@ -27,6 +27,24 @@ module.exports = class MockarooClient {
     });
   }
 
+  async getDataPoolPosts3() {
+    return this.client.generate({
+      count: this.amount,
+      schema: 'post_schema'
+    }).then(function(records) {
+      return records;
+    });
+  }
+
+  async getDataPoolPosts4() {
+    return this.client.generate({
+      count: this.amount,
+      schema: 'post_schema'
+    }).then(function(records) {
+      return records;
+    });
+  }
+
   async getDataPoolPages() {
     return this.client.generate({
       count: this.amount,
